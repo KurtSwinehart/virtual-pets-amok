@@ -6,4 +6,9 @@ public class OrganicCat extends OrganicPet implements OrganicFeature {
 		super(petName, happinessLevel, healthLevel, foodLevel, waterLevel, healthLevel);
 	}
 
+	public void tick() {
+		happinessLevel -= 2;
+		foodLevel -= 4;
+		waterLevel -= 3;
+	}
 }

@@ -18,7 +18,10 @@ public class OrganicDog extends OrganicPet implements OrganicFeature, Dog {
 	}
 
 	public void tick() {
+		happinessLevel -= 5;
 		cleanlinessLevel -= 2;
+		foodLevel -= 5;
+		waterLevel -= 5;
 	}
 
 	@Override

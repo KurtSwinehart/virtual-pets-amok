@@ -1,4 +1,3 @@
-import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.nullValue;
@@ -31,6 +30,11 @@ public class ShelterTest {
 		assertThat(retrievedPet, is(pet1));
 	}
 
+//	@Test
+//	public void shouldBeAbleToAddOrganicDog() {
+//		underTest.addOrganicDog(pet1);
+//	}
+
 	@Test
 	public void shouldIncreasePetTotalFromZeroToTwoWhenAdmitting2Pets() {
 		underTest.add(pet1);
@@ -54,11 +58,6 @@ public class ShelterTest {
 		VirtualPet petToPlayWith = underTest.findPet("Belle");
 		assertThat(petToPlayWith.getPetName(), is("Belle"));
 		assertThat(petToPlayWith.getHappinessLevel(), is(15));
-	}
-
-	@Test
-	public void shouldBeAbleToGetPetClassOfOrganicDog() {
-		assertThat(pet1, instanceOf(OrganicPet.class));
 	}
 
 	@Test

@@ -33,12 +33,16 @@ public class OrganicPet extends VirtualPet implements OrganicFeature {
 	public void giveFood(int amount) {
 		foodLevel += amount;
 		healthLevel += 2;
+		happinessLevel += 3;
+		wasteLevel += 4;
 	}
 
 	@Override
 	public void giveWater(int amount) {
 		waterLevel += amount;
 		healthLevel += 2;
+		happinessLevel += 3;
+		wasteLevel += 3;
 	}
 
 	@Override

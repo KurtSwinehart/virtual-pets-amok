@@ -32,7 +32,7 @@ public class OrganicDogTest {
 	public void shouldDecreaseWasteLevelFrom10To0WhenLetEliminateWaste() {
 		underTest.letEliminateWaste(10);
 		int check = underTest.getWasteLevel();
-		assertThat(check, is(0));
+		assertThat(check, is(-10));
 	}
 
 	@Test

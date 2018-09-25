@@ -32,6 +32,6 @@ public class RoboticCatTest {
 	public void shouldIncreaseHealthLevelWhenCharged() {
 		underTest.giveCharge(5);
 		int check = underTest.getHealthLevel();
-		assertThat(check, is(5));
+		assertThat(check, is(2));
 	}
 }

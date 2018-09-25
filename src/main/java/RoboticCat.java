@@ -5,4 +5,9 @@ public class RoboticCat extends RoboticPet implements RoboticFeature {
 		super(petName, happinessLevel, healthLevel, chargeLevel, oilLevel);
 	}
 
+	public void tick() {
+		happinessLevel -= 2;
+		chargeLevel -= 3;
+		oilLevel -= 2;
+	}
 }

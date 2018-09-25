@@ -20,7 +20,7 @@ public class VirtualPet {
 	}
 
 	public void playWithPet(int amount) {
-		happinessLevel += amount;
+		happinessLevel += 5;
 		healthLevel += 2;
 	}
 

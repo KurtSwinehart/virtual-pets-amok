@@ -40,9 +40,11 @@ public class RoboticPet extends VirtualPet implements RoboticFeature {
 		healthLevel += 2;
 	}
 
+	@Override
 	public void playWithPet(int amount) {
 		happinessLevel += amount;
-		oilLevel -= 2;
+		oilLevel -= 3;
+		chargeLevel -= 5;
 		healthLevel += 2;
 	}
 
