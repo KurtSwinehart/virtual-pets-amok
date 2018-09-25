@@ -1,5 +1,5 @@
 
-public class OrganicPet extends VirtualPet implements OrganicFeatures {
+public class OrganicPet extends VirtualPet implements OrganicFeature {
 
 	public int foodLevel;
 	public int waterLevel;
@@ -26,7 +26,7 @@ public class OrganicPet extends VirtualPet implements OrganicFeatures {
 
 	@Override
 	public int getWasteLevel() {
-		return waterLevel;
+		return wasteLevel;
 	}
 
 	@Override

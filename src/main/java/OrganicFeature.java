@@ -1,5 +1,5 @@
 
-public interface OrganicFeatures {
+public interface OrganicFeature {
 
 	int getFoodLevel();
 

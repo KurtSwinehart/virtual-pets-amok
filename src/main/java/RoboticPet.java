@@ -1,22 +1,13 @@
 
-public class RoboticPet {
+public class RoboticPet extends VirtualPet implements RoboticFeature {
 
-	protected String petName;
 	protected int chargeLevel;
 	protected int oilLevel;
-	protected int happinessLevel;
-	protected int healthLevel;
 
-	public RoboticPet() {
-		super();
-	}
-
-	public int getChargeLevel() {
-		return chargeLevel;
-	}
-
-	public int getOilLevel() {
-		return oilLevel;
+	public RoboticPet(String petName, int happinessLevel, int healthLevel, int chargeLevel, int oilLevel) {
+		super(petName, happinessLevel, healthLevel);
+		this.chargeLevel = chargeLevel;
+		this.oilLevel = oilLevel;
 	}
 
 	public int getHappinessLevel() {
@@ -27,11 +18,23 @@ public class RoboticPet {
 		return healthLevel;
 	}
 
+	@Override
+	public int getChargeLevel() {
+		return chargeLevel;
+	}
+
+	@Override
+	public int getOilLevel() {
+		return oilLevel;
+	}
+
+	@Override
 	public void giveCharge(int amount) {
 		chargeLevel += amount;
 		healthLevel += 2;
 	}
 
+	@Override
 	public void giveOil(int amount) {
 		oilLevel += amount;
 		healthLevel += 2;

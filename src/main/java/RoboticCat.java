@@ -1,12 +1,8 @@
 
-public class RoboticCat extends RoboticPet {
+public class RoboticCat extends RoboticPet implements RoboticFeature {
 
-	public RoboticCat(String petName, int chargeLevel, int oilLevel, int happinessLevel, int healthLevel) {
-		this.petName = petName;
-		this.chargeLevel = chargeLevel;
-		this.oilLevel = oilLevel;
-		this.happinessLevel = happinessLevel;
-		this.healthLevel = healthLevel;
+	public RoboticCat(String petName, int happinessLevel, int healthLevel, int chargeLevel, int oilLevel) {
+		super(petName, happinessLevel, healthLevel, chargeLevel, oilLevel);
 	}
 
 }

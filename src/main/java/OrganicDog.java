@@ -1,5 +1,5 @@
 
-public class OrganicDog extends OrganicPet implements OrganicFeatures, Dog {
+public class OrganicDog extends OrganicPet implements OrganicFeature, Dog {
 
 	public int cleanlinessLevel;
 
@@ -9,19 +9,23 @@ public class OrganicDog extends OrganicPet implements OrganicFeatures, Dog {
 		this.cleanlinessLevel = cleanlinessLevel;
 	}
 
-	public void cleanCage(int i) {
-		cleanlinessLevel += 5;
-	}
-
 	public int getCleanlinessLevel() {
 		return cleanlinessLevel;
 	}
 
-	public void takeForWalk() {
-		happinessLevel += 5;
+	public void cleanCage(int i) {
+		cleanlinessLevel += 5;
 	}
 
 	public void tick() {
 		cleanlinessLevel -= 2;
+	}
+
+	@Override
+	public void walk() {
+		wasteLevel -= 10;
+		happinessLevel += 5;
+		healthLevel += 2;
+
 	}
 }
