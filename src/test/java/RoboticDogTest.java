@@ -39,6 +39,6 @@ public class RoboticDogTest {
 	public void shouldDecreaseOilLevelWhenPlaying() {
 		underTest.playWithPet(5);
 		int check = underTest.getOilLevel();
-		assertThat(check, is(-2));
+		assertThat(check, is(-3));
 	}
 }

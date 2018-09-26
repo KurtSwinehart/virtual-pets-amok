@@ -11,14 +11,14 @@ public class ShelterApp {
 		Scanner input = new Scanner(System.in);
 		Shelter myShelter = new Shelter();
 
-		myShelter.add(new OrganicDog("Chewie", 10, 10, 10, 10, 10, 10));
-		myShelter.add(new OrganicDog("Ralph", 10, 10, 10, 10, 10, 10));
-		myShelter.add(new OrganicCat("Cleo", 10, 10, 10, 10, 10));
-		myShelter.add(new OrganicCat("Jerry", 10, 10, 10, 10, 10));
-		myShelter.add(new RoboticDog("Max", 10, 10, 10, 10));
-		myShelter.add(new RoboticDog("Fido", 10, 10, 10, 10));
-		myShelter.add(new RoboticCat("Belle", 10, 10, 10, 10));
-		myShelter.add(new RoboticCat("Ariel", 10, 10, 10, 10));
+		myShelter.add(new OrganicDog("Chewie", 5, 1, 8, 6, 3, 2));
+		myShelter.add(new OrganicDog("Ralph", 10, 3, 2, 9, 2, 4));
+		myShelter.add(new OrganicCat("Cleo", 1, 2, 3, 4, 5));
+		myShelter.add(new OrganicCat("Jerry", 5, 4, 3, 2, 1));
+		myShelter.add(new RoboticDog("Max", 4, 10, 14, 1));
+		myShelter.add(new RoboticDog("Fido", 6, 3, 2, 7));
+		myShelter.add(new RoboticCat("Belle", 1, 6, 4, 8));
+		myShelter.add(new RoboticCat("Ariel", 4, 7, 1, 10));
 
 		System.out.println(
 				"Welcome to Kurt's Krazy Shelter...the pets are starting to run amok! Please adopt one today!");
@@ -89,7 +89,7 @@ public class ShelterApp {
 					myShelter.add(new OrganicDog(petName, happinessLevel, healthLevel, foodLevel, waterLevel,
 							wasteLevel, cleanlinessLevel));
 					menuOptions(input);
-//					userChoice = input.nextLine();
+					userChoice = input.nextLine();
 				} else if (newPetType.equals("OrganicCat")) {
 					System.out.println("Enter pet's name: ");
 					String petName = input.nextLine();
@@ -120,6 +120,7 @@ public class ShelterApp {
 					int oilLevel = input.nextInt();
 					myShelter.add(new RoboticDog(petName, happinessLevel, healthLevel, chargeLevel, oilLevel));
 					menuOptions(input);
+					userChoice = input.nextLine();
 				} else if (newPetType.equals("RoboticCat")) {
 					System.out.println("Enter pet's name: ");
 					String petName = input.nextLine();
@@ -133,11 +134,13 @@ public class ShelterApp {
 					int oilLevel = input.nextInt();
 					myShelter.add(new RoboticCat(petName, happinessLevel, healthLevel, chargeLevel, oilLevel));
 					menuOptions(input);
+					userChoice = input.nextLine();
 				}
 			} else if (userChoice.equals("9")) {
-				System.out.println("Yes, please...this place reeks!");
+				System.out.println("Yes, please...this place reeks! What's next?");
 				myShelter.cleanAllCages();
-				menuOptions(input);
+//				menuOptions(input);
+				userChoice = input.nextLine();
 			} else if (userChoice.equals("10")) {
 				System.out.println("The litterbox level is " + myShelter.getLitterBoxLevel() + ".");
 				System.out.println("What else would you like to do?");
@@ -168,6 +171,7 @@ public class ShelterApp {
 		}
 
 		System.out.println("Goodbye. Thanks for visiting Kurt's Krazy Shelter!");
+		input.close();
 		System.exit(0);
 	}
 

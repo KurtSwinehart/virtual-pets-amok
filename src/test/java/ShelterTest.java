@@ -131,7 +131,7 @@ public class ShelterTest {
 		underTest.add(pet1);
 		underTest.add(pet3);
 		underTest.cleanAllCages();
-		assertThat(pet1.getCleanlinessLevel(), is(15));
+		assertThat(pet1.getCageWasteLevel(), is(0));
 	}
 
 	@Test

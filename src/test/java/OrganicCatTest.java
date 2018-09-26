@@ -9,9 +9,9 @@ public class OrganicCatTest {
 
 	@Test
 	public void shouldIncreaseFoodAmtFrom0To10ByFeedingIt() {
-		underTest.giveFood(10);
+		underTest.giveFood(5);
 		int check = underTest.getFoodLevel();
-		assertThat(check, is(10));
+		assertThat(check, is(5));
 	}
 
 	@Test
@@ -23,9 +23,9 @@ public class OrganicCatTest {
 
 	@Test
 	public void shouldIncreaseHappinessFrom0To10ByPlaying() {
-		underTest.playWithPet(10);
+		underTest.playWithPet(5);
 		int check = underTest.getHappinessLevel();
-		assertThat(check, is(10));
+		assertThat(check, is(5));
 	}
 
 }

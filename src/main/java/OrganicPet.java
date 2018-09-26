@@ -31,10 +31,10 @@ public class OrganicPet extends VirtualPet implements OrganicFeature {
 
 	@Override
 	public void giveFood(int amount) {
-		foodLevel += amount;
+		foodLevel += 5;
 		healthLevel += 2;
 		happinessLevel += 3;
-		wasteLevel += 4;
+		wasteLevel += 6;
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class OrganicPet extends VirtualPet implements OrganicFeature {
 		waterLevel += amount;
 		healthLevel += 2;
 		happinessLevel += 3;
-		wasteLevel += 3;
+		wasteLevel += 4;
 	}
 
 	@Override

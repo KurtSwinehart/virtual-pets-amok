@@ -34,8 +34,8 @@ public class Shelter {
 				System.out.println("Pet name: " + pet.getPetName() + ", Happiness Level: " + pet.getHappinessLevel()
 						+ ", Health Level: " + pet.getHealthLevel() + ", Food Level: "
 						+ ((OrganicDog) pet).getFoodLevel() + ", Water Level: " + ((OrganicDog) pet).getWaterLevel()
-						+ ", Waste Level: " + ((OrganicDog) pet).getWasteLevel() + ", Cleanliness Level: "
-						+ ((OrganicDog) pet).getCleanlinessLevel());
+						+ ", Waste Level: " + ((OrganicDog) pet).getWasteLevel() + ", Cage Waste Level: "
+						+ ((OrganicDog) pet).getCageWasteLevel());
 			}
 		}
 
@@ -131,7 +131,7 @@ public class Shelter {
 	public void cleanAllCages() {
 		for (VirtualPet pet : pets.values()) {
 			if (pet instanceof OrganicDog) {
-				((OrganicDog) pet).cleanCage(5);
+				((OrganicDog) pet).cleanCage();
 			}
 		}
 	}
@@ -160,7 +160,7 @@ public class Shelter {
 	}
 
 	public void tick() {
-		litterBoxLevel += 5;
+		litterBoxLevel += 3;
 	}
 
 }
